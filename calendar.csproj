@@ -29,7 +29,6 @@
     <ConsolePause>false</ConsolePause>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
@@ -39,16 +38,37 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>assembler\Json70r1\Bin\Net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="DDay.iCal">
+      <HintPath>packages\DDay.iCal.1.0.2.575\lib\DDay.iCal.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Calendar">
+      <HintPath>packages\Core.Calendar.0.1.193\lib\net45\Core.Calendar.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Portable">
+      <HintPath>packages\Core.Common.0.1.4\lib\net45\Core.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Platform">
+      <HintPath>packages\Core.Common.0.1.4\lib\net45\Core.Platform.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Reader.cs" />
     <Compile Include="Core\Session.cs" />
     <Compile Include="Core\Principal.cs" />
     <Compile Include="Core\Transformer.cs" />
+    <Compile Include="View\Principal.cs" />
+    <Compile Include="View\MainWindowView.cs" />
+    <Compile Include="View\MainWindowCore.cs" />
+    <Compile Include="Core\Events.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
