@@ -2,9 +2,9 @@
 
 namespace calendar
 {
-	public class Session
+	public class RunSession
 	{
-		public Session ()
+		public RunSession ()
 		{
 		}
 

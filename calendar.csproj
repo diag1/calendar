@@ -58,14 +58,14 @@
     <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Reader.cs" />
-    <Compile Include="Core\Session.cs" />
-    <Compile Include="Core\Principal.cs" />
-    <Compile Include="Core\Transformer.cs" />
     <Compile Include="View\Principal.cs" />
     <Compile Include="View\MainWindowView.cs" />
     <Compile Include="View\MainWindowCore.cs" />
-    <Compile Include="Core\Events.cs" />
+    <Compile Include="Core\RunSession.cs" />
+    <Compile Include="Core\JSONTransformer.cs" />
+    <Compile Include="Core\WeightSession.cs" />
+    <Compile Include="Core\RunEventFilter.cs" />
+    <Compile Include="Core\WeightEventFilter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -6,16 +6,16 @@ using Newtonsoft.Json;
 namespace calendar
 {	
 	public interface Reader {
-		List<Session> Read (String fn);
+		List<RunSession> Read (String fn);
 	}
 	public class JSONReader :Reader
 	{
-		private List<Session> lst;
+		private List<RunSession> lst;
 
-		public List<Session> Read (String fn){
+		public List<RunSession> Read (String fn){
 			using (StreamReader r = new StreamReader (fn)) {
 				string json = r.ReadToEnd ();
-				this.lst = JsonConvert.DeserializeObject<List<Session>> (json);
+				this.lst = JsonConvert.DeserializeObject<List<RunSession>> (json);
 				return this.lst;
 			}
 		}
